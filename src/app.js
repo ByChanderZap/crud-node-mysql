@@ -24,6 +24,8 @@ app.use(myConnection(mysql, {
   database: 'crudnodejs'
 }, 'single'));
 
+app.use(express.urlencoded({extended: false})); //Esto es para entender los datos que nos va a enviar el navegador
+
 
 //routes
 app.use('/', customerRoutes);
